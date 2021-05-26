@@ -18,7 +18,8 @@ class Utilisateur extends \Illuminate\Database\Eloquent\Model {
     }
 
     public static searchUser($pseudo){
-    	Utilisateur::where('pseudo', '=', "$pseudo")->first();
+    	return Utilisateur::where('pseudo', '=', $pseudo)->first();
+    
     }
 }
 
